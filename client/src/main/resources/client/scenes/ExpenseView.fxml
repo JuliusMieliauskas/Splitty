@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane prefHeight="680.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.ExpenseViewCtrl">
+    <children>
+       <Button fx:id="returnButton" layoutX="30.0" layoutY="30.0" mnemonicParsing="false" onAction="#returnToEvent" styleClass="button-style" text="Return to event" />
+      <VBox layoutX="296.0" layoutY="30.0" prefHeight="118.0" prefWidth="429.0" spacing="12.0">
+         <children>
+              <Label fx:id="titleLabel" text="name">
+                  <font>
+                      <Font name="System Bold" size="20.0" />
+                  </font>
+            </Label>
+            <HBox spacing="20.0">
+               <children>
+                    <Label fx:id="originalPayerLabel" text="original_payer" />
+                    <Label fx:id="originalPayer" text="payer_name" />
+               </children>
+            </HBox>
+            <HBox spacing="20.0">
+               <children>
+                    <Label fx:id="categoryLabel" text="category" />
+                    <Label fx:id="tagLabel" text="tag_name" />
+               </children>
+            </HBox>
+            <HBox spacing="20.0">
+               <children>
+                    <Label fx:id="ibanlbl" text="iban" />
+                  <Label fx:id="iban" text="iban" />
+               </children>
+            </HBox>
+         </children>
+      </VBox>
+
+        <TableView fx:id="userExpenseTable" layoutX="296.0" layoutY="220.0" maxWidth="1.7976931348623157E308" minWidth="-Infinity" prefHeight="350.0" prefWidth="608.0">
+            <columns>
+                <TableColumn fx:id="userNameColumn" prefWidth="349.0" text="username" />
+                <TableColumn fx:id="paidColumn" prefWidth="116.0" text="paid" />
+                <TableColumn fx:id="totalColumn" prefWidth="142.0" text="total" />
+            </columns>
+        </TableView>
+
+      <VBox layoutX="754.0" layoutY="21.0" prefHeight="185.0" prefWidth="150.0" spacing="16.0">
+         <children>
+             <Button fx:id="singleRemindButton" layoutX="438.0" layoutY="56.0" mnemonicParsing="false" onAction="#sendReminderOne" prefHeight="25.0" prefWidth="150.0" styleClass="button-style" text="Send reminder" />
+             <Button fx:id="reminderBtn" layoutX="438.0" layoutY="89.0" onAction="#sendReminderMany" prefHeight="25.0" prefWidth="150.0" styleClass="button-style" text="Remind everyone" />
+             <Button fx:id="editExpenseButton" layoutX="288.0" layoutY="20.0" mnemonicParsing="false" onAction="#editExpense" prefWidth="150.0" styleClass="button-style" text="editExpenseButton" />
+              <Label fx:id="paidAmountMsg" text="paidAmount" />
+              <TextField fx:id="paidAmount" />
+         </children>
+      </VBox>
+    </children>
+</AnchorPane>

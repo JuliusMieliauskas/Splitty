@@ -1,0 +1,88 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.AddEditExpenseCtrl">
+   <children>
+      <Button fx:id="cancelButton" layoutX="30.0" layoutY="30.0" mnemonicParsing="false" onAction="#cancel" styleClass="button-style" text="Cancel" />
+      <VBox layoutX="437.0" layoutY="128.0" spacing="12.0">
+         <children>
+            <Label fx:id="addEditExpenseLabel" text="Add/edit expense for event:">
+               <font>
+                  <Font size="18.0" />
+               </font>
+            </Label>
+            <Label fx:id="event" text="Event_Name">
+               <font>
+                  <Font name="System Bold" size="24.0" />
+               </font>
+            </Label>
+            <HBox spacing="50.0">
+               <children>
+                  <VBox alignment="CENTER_LEFT" spacing="12.0">
+                     <children>
+                        <Label fx:id="whoPaidLabel" prefHeight="24.0" text="Who paid?*">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                        <Label fx:id="whatForLabel" prefHeight="24.0" text="What for?*">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </Label>
+                     </children>
+                  </VBox>
+                  <VBox alignment="CENTER_LEFT" spacing="12.0">
+                     <children>
+                        <ComboBox fx:id="participant" prefHeight="24.0" prefWidth="165.0" />
+                        <TextField fx:id="title" prefHeight="24.0" prefWidth="159.0" />
+                     </children>
+                  </VBox>
+               </children>
+            </HBox>
+            <VBox alignment="CENTER_LEFT">
+               <children>
+                  <Label fx:id="splitEqualLabel" text="Split equal?">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <HBox alignment="CENTER_LEFT" spacing="10.0">
+                     <children>
+                        <CheckBox fx:id="equal" mnemonicParsing="false" onAction="#changeEqual" prefHeight="17.0" prefWidth="140.0" text="Yes, with total amout:" />
+                        <TextField fx:id="amount" prefHeight="25.0" prefWidth="60.0" />
+                        <Label fx:id="currencyText" text="USD" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox spacing="6.0">
+               <children>
+                  <Label fx:id="splitBetweenWhoLabel" text="Split between who?*">
+                     <font>
+                        <Font size="14.0" />
+                     </font>
+                  </Label>
+                  <ScrollPane fx:id="debtorsPane" prefHeight="111.0" prefWidth="307.0" />
+                  <Label fx:id="needsToBeFilledInLabel" text="*Needs to be filled in" />
+                  <HBox alignment="CENTER" spacing="30.0">
+                     <children>
+                        <Button fx:id="saveButton" mnemonicParsing="false" onAction="#saveExpense" styleClass="button-style" text="Save" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+   </children>
+</AnchorPane>

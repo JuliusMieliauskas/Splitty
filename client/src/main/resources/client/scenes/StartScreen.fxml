@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ListView?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.StartScreenCtrl">
+   <children>
+      <VBox alignment="TOP_RIGHT" layoutX="959.0" layoutY="14.0" prefWidth="227.0">
+         <children>
+            <VBox fx:id="languageChoiceBoxContainer" alignment="TOP_RIGHT" />
+
+            <Button fx:id="settingsBtn" mnemonicParsing="false" onAction="#toSettings" styleClass="button-style" text="Settings">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+            <Button fx:id="importJsonButton" alignment="CENTER" mnemonicParsing="false" onAction="#importJson" styleClass="button-style" text="Import event from json" textAlignment="RIGHT">
+               <VBox.margin>
+                  <Insets top="10.0" />
+               </VBox.margin>
+            </Button>
+         </children>
+      </VBox>
+      <VBox layoutX="445.0" layoutY="100.0" spacing="30.0">
+         <children>
+            <VBox spacing="6.0">
+               <children>
+
+                              <!-- Label : Create New Event -->
+                  <Label fx:id="createNewEventLabel" text="create_new_event">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox spacing="20.0">
+                     <children>
+
+                        <!-- Text Field : Create Event -->
+                        <TextField fx:id="createEvent" prefWidth="200.0" />
+
+                        <!-- Button : Create Event -->
+                        <Button fx:id="createButton" mnemonicParsing="false" onAction="#create" prefHeight="25.0" prefWidth="120.0" styleClass="button-style" text="create" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox spacing="6.0">
+               <children>
+
+                  <!-- Label : Join Event -->
+                  <Label fx:id="joinEventLabel" text="join_event">
+                     <font>
+                        <Font name="System Bold" size="16.0" />
+                     </font>
+                  </Label>
+                  <HBox spacing="20.0">
+                     <children>
+
+                        <!-- Test Field : Join Event -->
+                        <TextField fx:id="joinEvent" prefWidth="200.0" />
+
+                        <!-- Button : Join Event -->
+                        <Button fx:id="joinButton" mnemonicParsing="false" onAction="#join" prefHeight="25.0" prefWidth="120.0" styleClass="button-style" text="join" />
+                     </children>
+                  </HBox>
+               </children>
+            </VBox>
+            <VBox spacing="6.0">
+               <children>
+
+                  <!-- Label : All events -->
+                  <Label fx:id="allYourEventsLabel" text="all_your_events">
+                     <font>
+                        <Font name="System Bold" size="14.0" />
+                     </font>
+                  </Label>
+
+                  <MenuButton fx:id="sortMenu" alignment="CENTER_RIGHT" mnemonicParsing="false" prefHeight="24.0" text="%sort">
+                     <items>
+                        <MenuItem fx:id="sortA" mnemonicParsing="false" onAction="#sortAlphabetically" text="Alphabetically" />
+                        <MenuItem fx:id="sortN" mnemonicParsing="false" onAction="#sortNewest" text="Newest Event" />
+                        <MenuItem fx:id="sortL" mnemonicParsing="false" onAction="#sortLatest" text="Latest Activity" />
+                     </items>
+                  </MenuButton>
+
+                  <!-- List : Active Events -->
+                  <ListView fx:id="activeEvents" prefHeight="150.0" prefWidth="314.0" />
+
+                  <!-- Button : Leave Event -->
+                  <Button fx:id="deleteButton" mnemonicParsing="false" onAction="#delete" prefHeight="25.0" styleClass="button-style" text="delete" visible="false" />
+               </children>
+            </VBox>
+         </children>
+      </VBox>
+      <Label layoutX="540.0" layoutY="21.0" text="Splitty">
+         <font>
+            <Font size="43.0" />
+         </font>
+      </Label>
+
+   </children>
+</AnchorPane>

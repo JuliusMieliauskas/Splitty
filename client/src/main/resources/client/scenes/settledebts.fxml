@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TreeView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="680.0" prefWidth="1200.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="client.scenes.SettleDebtsCtrl">
+   <children>
+      <TreeView fx:id="tree" layoutX="371.0" layoutY="165.0" prefHeight="281.0" prefWidth="458.0" />
+      <Label fx:id="descriptionLabel" layoutX="391.0" layoutY="122.0" text="These are all transactions needed to settle the debts:">
+         <font>
+            <Font size="18.0" />
+         </font>
+      </Label>
+      <Button fx:id="returnButton" layoutX="30.0" layoutY="30.0" mnemonicParsing="false" onAction="#back" prefHeight="34.0" styleClass="button-style" text="Back" />
+      <Button fx:id="settlebtn" layoutX="488.0" layoutY="464.0" mnemonicParsing="false" onAction="#settle" prefHeight="34.0" prefWidth="223.0" styleClass="button-style" text="settle" />
+   </children>
+</AnchorPane>

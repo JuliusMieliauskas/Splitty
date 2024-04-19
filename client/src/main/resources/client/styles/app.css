@@ -1,0 +1,111 @@
+.button-style {
+    -fx-background-color: #0F172A;
+    -fx-text-fill: #F8FAFC;
+    -fx-font-size: 12px;
+    -fx-padding: 6px 12px;
+    -fx-border-radius: 12px;
+}
+
+.button-red {
+    -fx-background-color: #f20000;
+    -fx-text-fill: #F8FAFC;
+    -fx-font-size: 12px;
+    -fx-padding: 6px 12px;
+    -fx-border-radius: 12px;
+}
+.radio-button {
+    -fx-border-width: 1px;
+    -fx-border-color: #0F172A;
+    -fx-background-image: null;
+    -fx-border-radius: 15px;
+    -fx-padding: 3px;
+}
+
+.button-style:hover {
+    -fx-background-color: #22345E;
+}
+
+.menu-button {
+    -fx-background-color: #0F172A;
+    -fx-text-fill: #F8FAFC;
+    -fx-font-size: 12px;
+    -fx-padding: 2px 4px;
+    -fx-border-radius: 12px;
+}
+
+.menu-button .label {
+    -fx-text-fill: #F8FAFC;
+}
+
+.menu-button .context-menu {
+    -fx-background-color: #0F172A;
+}
+
+.menu-button .context-menu .menu-item {
+    -fx-background-color: #0F172A;
+    -fx-text-fill: #F8FAFC;
+}
+
+.menu-button .context-menu .menu-item:hover {
+    -fx-background-color: #22345E;
+}
+
+.combo-box {
+    -fx-background: #F8FAFC;
+    -fx-background-color: transparent;
+    -fx-font-size: 12px;
+    -fx-padding: 2px 4px;
+    -fx-border-color: #0F172A;
+    -fx-border-radius: 6px;
+}
+
+.combo-box .list-cell  {
+    -fx-background: #F8FAFC;
+    -fx-background-color: transparent;
+    -fx-border-radius: 2px;
+    -fx-padding: 2px 4px;
+}
+
+.table-row-cell {
+    -fx-border-color: transparent transparent rgb(200, 200, 200) transparent;
+    -fx-border-width: 0 0 1 0;
+    -fx-text-fill: #0F172A;
+}
+.table-cell {
+    -fx-border-color: rgb(255, 255, 255);
+    -fx-background-color: rgb(255, 255, 255);
+}
+.table-row-cell:selected .table-cell {
+    -fx-background-color: rgb(200, 200, 200);
+    -fx-text-fill: #0F172A;
+}
+
+.chart-pie {
+    -fx-border-width: 0;
+    -fx-text-background-color: transparent;
+}
+.button-style:focused, .button-red:focused .menu-button:selected .menu-item:selected{
+    -fx-border-color: red;
+    -fx-border-width: 2px;
+    -fx-border-style: solid;
+    -fx-border-radius: 0;
+}
+.menu-button:focused .menu-item:focused {
+    -fx-border-color: red;
+    -fx-border-width: 2px;
+    -fx-border-style: solid;
+    -fx-border-radius: 0;
+}
+.radio-button:focused, .menu-button:focused, .combo-box:focused {
+    -fx-border-color: red;
+    -fx-border-width: 2px;
+    -fx-border-style: solid;
+    -fx-border-radius: 0;
+}
+/*Tried putting all last three into one but they behaved weirdly. They work now so I'm not gonna touch it.*/
+.button-red:focused {
+    -fx-border-color: #0F172A;
+    -fx-border-width: 2px;
+    -fx-border-style: solid;
+    -fx-border-radius: 0;
+}

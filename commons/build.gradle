@@ -1,0 +1,12 @@
+
+java {
+	checkstyleTest.enabled = false
+	sourceCompatibility = '21'
+}
+
+
+dependencies {
+	implementation group: 'jakarta.persistence', name: 'jakarta.persistence-api', version: '3.1.0'
+	implementation 'com.fasterxml.jackson.core:jackson-databind:2.16.1'
+	implementation 'com.fasterxml.jackson.datatype:jackson-datatype-jsr310'
+}
